@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Minesweeper</title>
+</head>
+<body>
+	<dialog class="modal" id="modal">
+		<form method="dialog" id="form">
+			<section class="options">
+				<label for="easy">
+					<input type="radio" name="difficult" id="easy" value="easy">
+					easy
+				</label>
+				<label for="mid">
+					<input type="radio" name="difficult" id="mid" value="mid">
+					mid
+				</label>
+				<label for="hard">
+					<input type="radio" name="difficult" id="hard" value="hard">
+					hard
+				</label>
+				<label for="edit">
+					<input type="radio" name="difficult" id="edit" value="edit">
+					edit
+				</label>
+				<div class="params" id="params">
+					<label for="width" class="width">
+						width
+						<span>4-60</span>
+						<input type="number" id="width">
+					</label>
+					<label for="height" class="height">
+						height
+						<span>4-60</span>
+						<input type="number" id="height">
+					</label>
+					<label for="mines" class="mines">
+						mines
+						<span>x*y-9</span>
+						<input type="number" id="mines">
+					</label>
+				</div>
+			</section>
+			<section class="buttons">
+				<button id="done">accept</button>
+				<button id="close">cancel</button>
+			</section>
+		</form>
+	</dialog>
+	<main class="window">
+		<section class="stats">
+			<button class="restart" id="restart" title="restart"></button>
+			<div class="counters" id="counters">
+				<div class="timer" id="timer" title="time"></div>
+				<div class="flags" id="flags" title="flags"></div>
+			</div>
+			<button class="modes" id="modes" title="modes"></button>
+		</section>
+		<section class="board">
+			<div class="game" id="game">
+			</div>
+		</section>
+	</main>
+	<script src="main.js" type="module"></script>
+</body>
+</html>
